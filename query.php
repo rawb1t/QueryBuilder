@@ -90,6 +90,10 @@ abstract class Query extends DB
 				return "'$value'";
 			}
 		}
+		elseif( is_null( $value ) )
+		{
+			return 'NULL';
+		}
 
 		return $value;
 	}
