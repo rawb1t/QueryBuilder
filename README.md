@@ -3,15 +3,15 @@ Simple Class to build MySQL Queries. The library is using PDO to connect to data
 
 Turn code like this:
 
-  `pdo = new PDO("mysql:host=localhost;port=3306;dbname=database;charset=utf-8", "root", "password");
+  pdo = new PDO("mysql:host=localhost;port=3306;dbname=database;charset=utf-8", "root", "password");
 
   $stmt = $pdo->prepare("SELECT t1.id, t1.value, DATE_FORMAT(t1.date, '%d.%m.%Y') AS date_formatted, t2.external FROM table1 AS t1 LEFT JOIN table2 AS t2 USING (id) WHERE name IKE ':query' ORDER BY date DESC LIMIT 5");
   $stmt->bindValue(':query', 'foobar');
-  $stmt->execute();`
+  $stmt->execute();
 
 Into this:
 
-  `use QueryBuilder\DB;
+  use QueryBuilder\DB;
 
   DB::init("localhost", "root", "password", "database");
 
@@ -25,4 +25,4 @@ Into this:
   ->prepare();
 
   $stmt->bindValue(':query', 'foobar');
-  $stmt->execute();`
+  $stmt->execute();
