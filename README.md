@@ -14,7 +14,7 @@ $stmt->execute();
 Into this:
 
 ```PHP
-use QueryBuilder\DB;
+use XQuery\DB;
 
 DB::init("localhost", "root", "password", "database");
 
