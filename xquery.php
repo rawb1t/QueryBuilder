@@ -1,5 +1,5 @@
 <?php
-namespace QueryBuilder;
+namespace XQuery;
 
 class DB
 {
