@@ -1,4 +1,4 @@
-# querybuilder
+# QueryBuilder
 Simple Class to build MySQL Queries. The library is using PDO to connect to databases.
 
 Turn code like this:
